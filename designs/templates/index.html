@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>avdm.co.uk | Puzzle Game | Redux React</title>
+<meta name="keywords" content="web development, redux app, react app, redux react example" />
+<meta name="description" content="AV Digital Media, example puzzle game using Redux and React JS." />
+<meta name="viewport" content="maximum-scale=1.0,initial-scale=1.0,width=device-width,height=device-height,user-scalable=no" />
+<meta name="author" content="AV Digital Media Ltd." />
+<meta name="app-mobile-web-app-capable" content="yes" />
+<meta name="app-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="css/main.css" media="screen" />
+</head>
+<body>
+<div id="wrapper" class="no-tchdev">
+	<div id="avd-puzzle-game">
+		<header class="main">
+			<div class="hd-pnl visible">
+				<span class="label first">Level:</span><div id="user-level" class="hitems">Hard</div>
+				<span class="label">Time:</span><div id="user-time" class="hitems">00:00:00</div>
+				<span class="label">Your Moves:</span><div id="user-moves" class="hitems">0</div>
+				<span class="label">Correct:</span><div id="user-correct-pieces" class="hitems">0</div>
+				<button id="bt-restart" class="bt-ui">Restart</button>
+			</div>
+		</header>
+		<div class="main">
+			<canvas id="puzzle-container" class="content"> </canvas>
+
+			<div id-"ct-start" class="content visible">
+				<p>Welcome to the AVD Puzzle Game, use your mouse to drag and drop the puzzle pieces into their correct places, see if you can get the fatest time, set the difficulty if you think it is too easy.</p>
+				<button id="bt-start" class="bt-ui lrg">Start Game</button>
+				<button id="bt-closesettings" class="bt-ui">Settings</button>
+			</div>
+
+			<div id="ct-scores" class="content">
+				<p>Below are the high scores for the puzzle game, at the end of Aug 2017 the highest scores in each category will be awarded the prize.</p>
+
+				<div class="hg-scores-grp">
+					<header class="scr-hd">
+						<ul class="scr-type">
+							<li class="active">Hard</li><li>Medium</li><li>Easy</li>
+						</ul>
+						<ul class="scr-pg">
+							<li>&lt;</li><li>&gt;</li>
+						</ul>
+					</header>
+					<table class="tbl-score">
+						<thead>
+							<tr>
+								<th>Username</th><th>Time</th><th>Moves</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+							<tr><td>Johnson Bob</td><td>12:00:43</td><td>32</td></tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div id="ct-settings" class="content">
+				<h2>Game Settings</h2>
+				<p>Set the game difficulty settings, the higher the difficulty, the higher the price, note that you can only win in one difficulty level.</p>
+				<div class="df-radios">
+					<label><input type="radio" name="difficulty" value="hard"> Hard</label>
+  				<label><input type="radio" name="difficulty" value="medium"> Medium</label>
+  				<label><input type="radio" name="difficulty" value="easy" checked> Easy</label>
+				</div>
+				<button id="bt-closesettings" class="bt-ui">Close Settings</button>
+			</div>
+
+			<div id="ct-status" class="content">
+				<h2>Puzzle Complete</h2>
+				<p>Well Done! You completed the <strong>Hard</strong> Puzzle in 00:00:00, that a great score.</p>
+				<button id="bt-highscores" class="bt-ui lrg">High Scores</button>
+			</div>
+
+		</div>
+		<footer class="main visible">
+			<span>&copy; AV Digital Media Ltd. All Rights Reserved</span>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

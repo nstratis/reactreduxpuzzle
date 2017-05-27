@@ -1,0 +1,13 @@
+/*
+ * CSS for the main puzzle game
+ * build path
+ * sass designs/templates/sass/css_main.scss designs/templates/css/main.css
+ */
+
+// Common CSS files
+@import "common/variables";
+@import "common/mixins";
+@import "common/default";
+
+// Puzzle specific files
+@import "puzzle/ui";
