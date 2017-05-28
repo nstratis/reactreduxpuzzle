@@ -6,13 +6,17 @@
  * or in part is permitted without the express permission of
  * AV Digital Media Ltd (UK).
  */
+import React from 'react'
+import { render } from 'react-dom'
+import { browserHistory } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
+import Root from './js/containers/root'
+import configureStore from './js/store/store'
 
-// Import the React Library files
-import React from 'react';
-import { render } from 'react-dom';
-// Import the React Router Browser History Manager
-import { browserHistory } from 'react-router';
-// Import the React Redux Bindong features
-import { syncHistoryWithStore } from 'react-redux-router';
+const store = configureStore()
+const history = syncHistoryWithStore(browserHistory, store)
 
-// Get the default applicaton container
+render(
+  <Root store={store} history={history} />,
+  document.getElementById('wrapper')
+)

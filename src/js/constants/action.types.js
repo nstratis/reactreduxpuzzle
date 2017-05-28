@@ -6,3 +6,4 @@
  */
 export const START_GAME = 'START_GAME';
 export const END_GAME = 'END_GAME';
+export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE';

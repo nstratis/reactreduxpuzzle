@@ -6,7 +6,7 @@
  */
 // Check the current environment and export the correct component container
 if(process.env.NODE_ENV === 'production'){
-  //module.exports = require('./root.prod');
+  module.exports = require('./root.dev');
 } else {
   module.exports = require('./root.dev');
 }

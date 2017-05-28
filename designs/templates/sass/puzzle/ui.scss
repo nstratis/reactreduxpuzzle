@@ -7,7 +7,7 @@ position:relative;
 width:800px;
 height:auto;
 margin:0 auto;
-
+text-align:center;
   .hd-pnl, canvas, footer { display:none; }
   .hd-pnl.visible, canvas.visible, footer.visible { display:block; }
 
@@ -83,19 +83,23 @@ margin:0 auto;
 
   .bt-ui
   {
-  display:block;
+  display:inline-block;
   background:$white;
   color:$drkgrey;
   border:none;
+  width:auto;
   height:40px;
+  line-height:40px;
   padding:0 10px 0 10px;
+  text-decoration:none;
   }
 
   .bt-ui.lrg
   {
   padding:30px !important;
   font-size:$flrg !important;
-  height:auto;
+  height:50px;
+  line-height:50px;
   }
 
   .bt-ui:hover
@@ -206,6 +210,7 @@ top:5px;
 }
 
 #bt-start,
+#bt-opensettings,
 #bt-closesettings,
 #bt-highscores
 {

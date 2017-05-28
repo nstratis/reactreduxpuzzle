@@ -4,16 +4,22 @@
  * or in part is permitted without the express permission of
  * AV Digital Media Ltd (UK).
  */
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import rootReducer from '../reducers'
+import DevTools from '../containers/dev.tools'
 
-// Import the redux store features
-import { createStore, applyMiddleware, compose} from 'redux';
-//import thunk from 'redux-thunk';
-//import createLogger from 'redux-logger';
-// Import the default root reducer
-import rootReducer from '../reducers';
+const configureStore = preloadedState => {
+  const store = createStore(
+    rootReducer,
+    preloadedState,
+    compose(
+      applyMiddleware(thunk, createLogger()),
+      DevTools.instrument()
+    )
+  )
+  return store
+}
 
-// Configure the application store
-const configureStore = defaultState => {
-  // Create the application store
-  const store = createStore(rootReducer, defaultState);
-};
+export default configureStore
