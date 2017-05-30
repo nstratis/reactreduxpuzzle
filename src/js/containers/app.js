@@ -109,9 +109,7 @@ class App extends Component {
     const { children } = this.props
     return (
       <div id="avd-puzzle-game">
-        <header className="main">
-
-        </header>
+        <header className="main"></header>
         <div className="main">
           {children}
         </div>

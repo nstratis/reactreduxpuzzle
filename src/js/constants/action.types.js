@@ -17,6 +17,7 @@ export const END_GAME = 'END_GAME'
 export const GAME_COMPLETED = 'GAME_COMPLETED'
 export const SAVE_SCORE = 'SAVE_SCORE'
 export const SHOW_SCORES = 'SHOW_SCORES'
+export const RECEIVE_SCORES = 'RECEIVE_SCORES'
 
 // Display  the results to the user
 export const DISPLAY_RESULTS = 'DISPLAY_RESULTS'

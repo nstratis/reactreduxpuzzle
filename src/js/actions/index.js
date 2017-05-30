@@ -34,7 +34,7 @@ export const updateSetting = (setting) => ({
 
 // Save the user score to the high scores
 export const saveScore = (details) => ({
-  type:types.START_GAME,
+  type:types.SAVE_SCORE,
   userdetails:details
 })
 
