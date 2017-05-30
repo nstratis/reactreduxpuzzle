@@ -9,9 +9,9 @@ import { createDevTools } from 'redux-devtools'
 import LogMonitor from 'redux-devtools-log-monitor'
 import DockMonitor from 'redux-devtools-dock-monitor'
 
+// Export the dev tools so that they can be rendered in the display
 export default createDevTools(
-  <DockMonitor toggleVisibilityKey="ctrl-h"
-               changePositionKey="ctrl-w">
+  <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-w">
     <LogMonitor />
   </DockMonitor>
 )

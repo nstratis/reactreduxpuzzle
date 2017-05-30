@@ -13,9 +13,29 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import Root from './js/containers/root'
 import configureStore from './js/store/store'
 
-const store = configureStore()
+// Initial Game State, this is the general data model for the game with a clear
+// Separation between the UI States and the DATA that is stored.
+const initState = {
+  gameStarted:false,
+  gameCompleted:false,
+  ui:{
+    header:false
+  },
+  data:{
+    user:{
+      username:null,
+      userTime:0,
+      userMoves:0,
+      difficulty:'Easy'
+    }
+  }
+}
+
+const store = configureStore(initState)
+// Synchronize the browser history with the store
 const history = syncHistoryWithStore(browserHistory, store)
 
+// Render the game by the root element
 render(
   <Root store={store} history={history} />,
   document.getElementById('wrapper')
