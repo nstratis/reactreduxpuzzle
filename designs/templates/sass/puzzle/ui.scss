@@ -1,222 +1,212 @@
 /*
  * The main UI for the puzzle
  */
-#avd-puzzle-game
-{
-position:relative;
-width:800px;
-height:auto;
-margin:0 auto;
-text-align:center;
-  .hd-pnl, canvas, footer { display:none; }
-  .hd-pnl.visible, canvas.visible, footer.visible { display:block; }
 
-  header.main
-  {
-  height:50px;
-  background-color:$drkgrey;
-    .hd-pnl { width:100%; height:100%; }
+#avd-puzzle-game {
+  position: relative;
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+
+  .hd-pnl,
+  canvas,
+  footer {
+    display: none;
   }
 
-  .content
-  {
-  display:none;
-  width:800px;
-  height:600px;
+  .hd-pnl.visible,
+  canvas.visible,
+  footer.visible {
+    display: block;
   }
 
-  .content.visible
-  {
-  display:block;
+  header.main {
+    height: 50px;
+    background-color: $drkgrey;
+
+    .hd-pnl {
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  div.main
-  {
-  display:block;
-  width:800px;
-  height:600px;
-  border-top:1px solid $white;
-  border-bottom:1px solid $white;
-  @include box-sizing(content-box);
-  background:$lgtgrey;
-  overflow:hidden;
+  .content {
+    display: none;
+    width: 800px;
+    height: 600px;
   }
 
-  canvas
-  {
-  margin:0;
-  width:800px;
-  height:600px;
-  background:url($assetPath + 'black_swan_head.jpg');
+  .content.visible {
+    display: block;
   }
 
-  footer
-  {
-  height:30px;
-  background-color:$drkgrey;
-  color:$medgrey;
-  padding-left:5px;
-  font-size:$fxxsmall;
-  line-height:30px;
+  div.main {
+    display: block;
+    width: 800px;
+    height: 600px;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    @include box-sizing(content-box);
+    background: $lgtgrey;
+    overflow: hidden;
   }
 
-  .hitems, .label
-  {
-  display:inline-block;
-  vertical-align:top;
-  color:$white;
-  height:40px;
-  line-height:40px;
-  margin-top:5px;
-  margin-left:5px;
+  canvas {
+    margin: 0;
+    width: 800px;
+    height: 600px;
+    background: url($assetPath + 'black_swan_head.jpg');
   }
 
-  .first
-  {
-  margin-left:20px;
+  footer {
+    height: 30px;
+    background-color: $drkgrey;
+    color: $medgrey;
+    padding-left: 5px;
+    font-size: $fxxsmall;
+    line-height: 30px;
   }
 
-  .hitems
-  {
-  min-width:30px;
+  .hitems,
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    color: $white;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
   }
 
-  .bt-ui
-  {
-  display:inline-block;
-  background:$white;
-  color:$drkgrey;
-  border:none;
-  width:auto;
-  height:40px;
-  line-height:40px;
-  padding:0 10px 0 10px;
-  text-decoration:none;
+  .first {
+    margin-left: 20px;
   }
 
-  .bt-ui.lrg
-  {
-  padding:30px !important;
-  font-size:$flrg !important;
-  height:50px;
-  line-height:50px;
+  .hitems {
+    min-width: 30px;
   }
 
-  .bt-ui:hover
-  {
-  background:$medgrey;
-  color:$white;
+  .bt-ui {
+    display: inline-block;
+    background: $white;
+    color: $drkgrey;
+    border: none;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    text-decoration: none;
   }
 
-  h2
-  {
-  text-align:center;
-  margin-top:40px;
-  font-size:$flrg;
-  color:$drkgrey;
+  .bt-ui.lrg {
+    padding: 30px !important;
+    font-size: $flrg !important;
+    height: 50px;
+    line-height: 50px;
   }
 
-  p
-  {
-  width:80%;
-  margin:0 auto;
-  margin-top:20px;
-  text-align:center;
+  .bt-ui:hover {
+    background: $medgrey;
+    color: $white;
   }
 
-  .hg-scores-grp
-  {
-  width:600px;
-  margin:0 auto;
-  margin-top:30px;
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: $flrg;
+    color: $drkgrey;
+  }
 
-    table
-    {
-    width:100%;
-    border-collapse:collapse;
-    border:1px solid $drkgrey;
-    height:300px;
-    overflow:hidden;
-      th, td
-      {
-      text-align:left;
-      padding:10px;
+  p {
+    width: 80%;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .hg-scores-grp {
+    width: 600px;
+    margin: 30px auto 0;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid $drkgrey;
+      height: 300px;
+      overflow: hidden;
+
+      td,
+      th {
+        text-align: left;
+        padding: 10px;
       }
-      th
-      {
-      background:$medgrey;
+
+      th {
+        background: $medgrey;
       }
     }
   }
 
-  .scr-type,
-  .scr-pg
-  {
-  list-style-type:none;
-    li
-    {
-    display:inline-block;
-    padding:10px;
-    background:$medgrey;
+  .scr-pg,
+  .scr-type {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      padding: 10px;
+      background: $medgrey;
     }
   }
 
-  .scr-type,
-  .scr-pg
-  {
-  list-style-type:none;
-    li:hover,
-    li.active
-    {
-    background:$drkgrey;
-    color:$white;
+  .scr-pg,
+  .scr-type {
+    list-style-type: none;
+
+    li.active,
+    li:hover {
+      background: $drkgrey;
+      color: $white;
     }
   }
 
-  .scr-hd
-  {
-  position:relative;
+  .scr-hd {
+    position: relative;
   }
 
-  .scr-pg
-  {
-  position:absolute;
-  right:0;
-  top:0;
-  list-style-type:none;
-    li
-    {
-    display:inline-block;
-    padding:10px;
-    background:$medgrey;
+  .scr-pg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      padding: 10px;
+      background: $medgrey;
     }
   }
 
-  .df-radios
-  {
-  width:600px;
-  text-align:center;
-  margin:0 auto;
-  margin-top:20px;
+  .df-radios {
+    width: 600px;
+    text-align: center;
+    margin: 20px auto 0;
   }
-
 }
 
-#bt-restart
-{
-position:absolute;
-right:5px;
-top:5px;
+#bt-restart {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
-#bt-start,
-#bt-opensettings,
 #bt-closesettings,
-#bt-highscores
-{
-position:relative;
-margin:auto auto;
-margin-top:100px;
+#bt-highscores,
+#bt-opensettings,
+#bt-start {
+  position: relative;
+  margin: 100px auto auto;
 }
 
-#bt-closesettings { margin-top:50px; }
+#bt-closesettings {
+  margin-top: 50px;
+}

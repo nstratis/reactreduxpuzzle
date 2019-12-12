@@ -1,5 +1,5 @@
 /**
- * @copyright (c) Copyright 2017 AV Digital Media Ltd. All Rights Reserved.
+ * @copyright (c) Copyright 2019 AV Digital Media Ltd. All Rights Reserved.
  * No unauthorized copying, distribution or modification to this code in whole
  * or in part is permitted without the express permission of
  * AV Digital Media Ltd (UK).
@@ -57,7 +57,7 @@ const ui = (state = { header:false }, action) => {
   // Set the current state for the ui
   switch(action.type){
     case types.START_GAME:
-      return { header:true };
+      return { header: true };
     default:
       return state;
   }
@@ -74,9 +74,17 @@ const user = (state = { userTime:'00:00:00', userMoves:0, difficulty:'Easy'}, ac
   // Set the current state for the data
   switch(action.type){
     case types.START_GAME:
-      return { userTime:'00:00:00', userMoves:0, difficulty:'Easy'};
+      return {
+        userTime: '00:00:00',
+        userMoves: 0,
+        difficulty: 'Easy'
+      };
     case types.UPDATE_SETTINGS:
-      return { userTime:'00:00:00', userMoves:0, difficulty:action.val};
+      return {
+        userTime: '00:00:00',
+        userMoves: 0,
+        difficulty: action.val
+      };
     default:
       return state;
   }
@@ -91,7 +99,11 @@ const scores = (state = [], action) => {
   // Set the current state for the data
   switch(action.type){
     case types.SHOW_SCORES:
-      return [...state, { username:'John Jones', userMoves:3, userTime:'01:43:45'}];
+      return [...state, {
+        username: 'John Jones',
+        userMoves: 3,
+        userTime: '01:43:45'
+      }];
     default:
       return state;
   }

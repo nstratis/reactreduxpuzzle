@@ -1,7 +1,7 @@
-/*global */
+/* global */
 /*  */
 /**
- * @copyright (c) Copyright 2017 AV Digital Media Ltd. All Rights Reserved.
+ * @copyright (c) Copyright 2019 AV Digital Media Ltd. All Rights Reserved.
  * No unauthorized copying, distribution or modification to this code in whole
  * or in part is permitted without the express permission of
  * AV Digital Media Ltd (UK).
@@ -16,17 +16,17 @@ import configureStore from './js/store/store'
 // Initial Game State, this is the general data model for the game with a clear
 // Separation between the UI States and the DATA that is stored.
 const initState = {
-  gameStarted:false,
-  gameCompleted:false,
+  gameStarted: false,
+  gameCompleted: false,
   ui:{
-    header:false
+    header: false
   },
   data:{
     user:{
-      username:null,
-      userTime:0,
-      userMoves:0,
-      difficulty:'Easy'
+      username: null,
+      userTime: 0,
+      userMoves: 0,
+      difficulty: 'Easy'
     }
   }
 }

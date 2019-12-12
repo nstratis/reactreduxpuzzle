@@ -17,13 +17,13 @@ describe('actions', () => {
 
   it('Creates an action to set the users details for the game in the store', () => {
     const details = {
-      username:'john',
-      userTime:'00:23:24',
-      userMoves:10,
+      username: 'john',
+      userTime: '00:23:24',
+      userMoves: 10,
     };
     const expectedAction = {
       type: types.SAVE_SCORE,
-      userdetails:details
+      userdetails: details
     }
     // Run the test on the action
     expect(actions.saveScore(details)).toEqual(expectedAction)

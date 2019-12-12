@@ -1,6 +1,6 @@
 /**
  * @class Radio
- * @copyright (c) Copyright 2017 AV Digital Media Ltd. All Rights Reserved.
+ * @copyright (c) Copyright 2019 AV Digital Media Ltd. All Rights Reserved.
  * No unauthorized copying, distribution or modification to this code in whole
  * or in part is permitted without the express permission of
  * AV Digital Media Ltd (UK).
@@ -16,6 +16,11 @@ export default (props) => {
     checked = true;
   }
   return (
-    <label><input type="radio" name="difficulty" value={props.label} onChange={props.onClick} checked={checked} /> {props.label}</label>
+    <label><input
+      type="radio"
+      name="difficulty"
+      value={props.label}
+      onChange={props.onClick}
+      checked={checked} /> {props.label}</label>
   )
 }

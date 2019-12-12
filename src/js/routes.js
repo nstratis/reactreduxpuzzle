@@ -40,5 +40,5 @@ export default (store) => {
     <Route path="/settings" component={SettingPage} />
     <Route path="/puzzle" component={PuzzlePage} onEnter={checkStarted} />
     <Route path="/highscores" component={ScoresPage} />
-    </Route>
+  </Route>;
 }
